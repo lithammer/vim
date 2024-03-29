@@ -39,6 +39,39 @@ var servers = [
     rootSearch: ['shard.yml'],
   },
   {
+    name: 'diagnostic-languageserver',
+    path: 'diagnostic-languageserver',
+    args: ['--stdio'],
+    filetype: [
+      'fish',
+      'lua',
+      'sh'
+    ],
+    initializationOptions: {
+      formatters: {
+        fish_indent: {
+          command: 'fish_indent'
+        },
+        shfmt: {
+          command: 'shfmt',
+          args: ['-filename', '%filepath'],
+          rootPatterns: ['.editorconfig'],
+        },
+        stylua: {
+          command: 'stylua',
+          args: ['-'],
+          rootPatterns: ['stylua.toml', '.stylua.toml'],
+          requiredFiles: ['stylua.toml', '.stylua.toml']
+        },
+      },
+      formatFiletypes: {
+        fish: 'fish_indent',
+        lua: 'stylua',
+        sh: 'shfmt'
+      }
+    }
+  },
+  {
     name: 'gopls',
     path: 'gopls',
     args: ['serve'],
