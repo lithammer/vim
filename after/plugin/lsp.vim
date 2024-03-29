@@ -196,6 +196,21 @@ var servers = [
     }
   },
   {
+    name: 'vscode-css-language-server',
+    path: 'vscode-css-language-server',
+    args: ['--stdio'],
+    filetype: ['css', 'scss', 'less'],
+  },
+  {
+    name: 'vscode-html-language-server',
+    path: 'vscode-html-language-server',
+    args: ['--stdio'],
+    filetype: ['html', 'htmldjango'],
+    initializationOptions: {
+      provideFormatter: true
+    },
+  },
+  {
     name: 'vscode-json-language-server',
     path: 'vscode-json-language-server',
     args: ['--stdio'],
