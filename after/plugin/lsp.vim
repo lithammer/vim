@@ -24,6 +24,7 @@ var servers = [
       'typescriptreact',
     ],
     rootSearch: ['biome.json'],
+    runIfSearch: ['biome.json'],
   },
   {
     path: 'clangd',
