@@ -281,12 +281,7 @@ import autoload 'lsp/buffer.vim' as buf
 
 def BufHasDocumentFormattingProvider(): bool
   var lspservers: list<dict<any>> = buf.CurbufGetServers()
-  for lspserver in lspservers
-    if lspserver.isDocumentFormattingProvider
-      return true
-    endif
-  endfor
-  return false
+  return lspservers->indexof((i, v) => v.isDocumentFormattingProvider) != -1
 enddef
 
 def OnLspAttached()
