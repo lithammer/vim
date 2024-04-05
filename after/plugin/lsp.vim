@@ -15,7 +15,7 @@ var servers = [
   },
   {
     name: 'biome',
-    path: 'biome',
+    path: './node_modules/.bin/biome',
     args: ['lsp-proxy'],
     filetype: [
       'javascript',
