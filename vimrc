@@ -85,7 +85,6 @@ def PackagerInit(pack: any)
   pack.add('wellle/targets.vim')
   pack.add('yegappan/cscope')
   pack.add('yegappan/fileselect')
-  pack.add('yegappan/grep')
   pack.add('yegappan/greplace')
   pack.add('yegappan/lsp')
   pack.add('yegappan/mru')
@@ -152,19 +151,22 @@ g:netrw_altfile = 1
 g:netrw_liststyle = 3
 g:is_posix = 1
 
-# Use CTRL-L to clear the highlighting of 'hlsearch' (off by default) and call
-# :diffupdate.
+# Use CTRL-L to clear the highlighting and call :diffupdate.
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-# Automatically open the quickfix window when populated.
-augroup quickfix
-  autocmd!
-  autocmd QuickFixCmdPost [^l]* cwindow
-  autocmd QuickFixCmdPost l* lwindow
-  autocmd VimEnter * cwindow
-augroup END
+g:qf_auto_open_quickfix = 1
+g:qf_auto_open_loclist = 1
+
+def Grep(...args: list<string>): string
+  return system(join([&grepprg] + [expandcmd(join(args, ' '))], ' '))
+enddef
+
+command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
+command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
+cnoreabbrev <expr> grep  (getcmdtype() ==# ':' && getcmdline() ==# 'grep')  ? 'Grep'  : 'grep'
+cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'lgrep'
 
 # Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
