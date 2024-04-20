@@ -23,7 +23,8 @@ augroup colorscheme_change
   }
 augroup END
 
+g:gruvbox_material_better_performance = 1
+g:gruvbox_material_foreground = 'original'
+
 set termguicolors
-# set background=dark
-# colorscheme wildcharm
-colorscheme zenwritten
+colorscheme gruvbox-material

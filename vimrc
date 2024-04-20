@@ -100,6 +100,7 @@ def PackagerInit(pack: any)
   # Colorschemes.
   pack.add('habamax/vim-alchemist')
   pack.add('mcchrish/zenbones.nvim')
+  pack.add('sainnhe/gruvbox-material')
 enddef
 
 packadd vim-packager
