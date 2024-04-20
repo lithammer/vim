@@ -105,6 +105,8 @@ enddef
 packadd vim-packager
 packager#setup(function('PackagerInit'))
 
+var vimdir = $MYVIMRC->fnamemodify(':p:h')
+
 set autoread
 set breakindent
 set breakindentopt=shift:2
@@ -131,21 +133,17 @@ set smartcase
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4
 set updatetime=300
-set viminfofile=~/.vim/viminfo
+&viminfofile = vimdir .. '/viminfo'
 set virtualedit=block
 set wildignorecase
 set wildmenu wildcharm=<c-z> wildoptions=pum,fuzzy,tagfile pumheight=20
 set wildmode=longest,full
 
-var vimdir = expand('~/.vim')
 &directory = vimdir .. '/swap//'
 &backupdir = vimdir .. '/backup'
 &undodir = vimdir .. '/undo'
 set backup
 set undofile
-
-g:vimdata = vimdir .. '/data'
-if !isdirectory(g:vimdata) | mkdir(g:vimdata, 'p') | endif
 
 g:netrw_altfile = 1
 g:netrw_liststyle = 3
