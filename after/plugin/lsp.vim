@@ -111,11 +111,6 @@ var servers = [
       }
     }
   },
-  # {
-  #   path: 'jsonnet-language-server',
-  #   args: ['--tanka'],
-  #   filetype: ['jsonnet', 'libsonnet'],
-  # },
   {
     name: 'lua-language-server',
     path: 'lua-language-server',
