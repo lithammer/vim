@@ -257,6 +257,13 @@ var servers = [
       }
     }
   },
+  {
+    name: 'zls',
+    path: 'zls',
+    args: [],
+    filetype: ['zig'],
+    rootSearch: ['zls.json', 'build.zig'],
+  }
 ]
 
 # :help 'lsp-options'
