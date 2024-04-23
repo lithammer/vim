@@ -308,7 +308,7 @@ def OnLspAttached()
 
   if BufHasDocumentFormattingProvider()
     augroup lsp_format_on_save
-      autocmd!
+      autocmd! * <buffer>
       autocmd BufWritePre <buffer> :LspFormat
     augroup END
   endif
