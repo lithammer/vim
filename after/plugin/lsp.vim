@@ -294,7 +294,7 @@ def OnLspAttached()
 
   nnoremap <buffer> g= <cmd>LspFormat<CR>
   vnoremap <buffer> g= <cmd>LspFormat<CR>
-  nnoremap <buffer> cra <cmd>LspCodeAction<CR>
+  nnoremap <buffer> crr <cmd>LspCodeAction<CR>
   nnoremap <buffer> gd <cmd>LspGotoDefinition<CR>
   nnoremap <buffer> gD <cmd>LspGotoDeclaration<CR>
   nnoremap <buffer> gs <cmd>LspSymbolSearch<CR>
