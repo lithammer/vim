@@ -107,6 +107,7 @@ packager#setup(function('PackagerInit'))
 
 packadd comment
 packadd! cfilter
+packadd! editorconfig
 
 var vimdir = $MYVIMRC->fnamemodify(':p:h')
 
