@@ -71,7 +71,6 @@ def PackagerInit(pack: any)
   pack.add('ludovicchabant/vim-gutentags')
   pack.add('markonm/traces.vim')
   pack.add('romainl/vim-qf')
-  pack.add('tpope/vim-commentary')
   pack.add('tpope/vim-endwise')
   pack.add('tpope/vim-eunuch')
   pack.add('tpope/vim-flagship')
@@ -99,12 +98,14 @@ def PackagerInit(pack: any)
 
   # Colorschemes.
   pack.add('habamax/vim-alchemist')
+  pack.add('habamax/vim-nod')
   pack.add('mcchrish/zenbones.nvim')
-  pack.add('sainnhe/gruvbox-material')
 enddef
 
 packadd vim-packager
 packager#setup(function('PackagerInit'))
+
+packadd comment
 
 var vimdir = $MYVIMRC->fnamemodify(':p:h')
 
