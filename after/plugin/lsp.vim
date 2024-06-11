@@ -72,6 +72,13 @@ var servers = [
     }
   },
   {
+    name: 'gleam',
+    path: 'gleam',
+    args: ['lsp'],
+    filetype: ['gleam'],
+    rootSearch: ['gleam.toml'],
+  },
+  {
     name: 'gopls',
     path: 'gopls',
     args: ['serve'],
