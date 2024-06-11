@@ -21,10 +21,11 @@ augroup colorscheme_change
     hi LspInformationHighlight cterm=underline gui=undercurl
     hi LspHintHighlight cterm=underline gui=undercurl
   }
+  autocmd ColorScheme zenwritten {
+    hi link LspInlayHintsParam LspInlayHint
+    hi link LspInlayHintsType LspInlayHint
+  }
 augroup END
 
-g:gruvbox_material_better_performance = 1
-g:gruvbox_material_foreground = 'original'
-
 set termguicolors
-colorscheme gruvbox-material
+colorscheme zenwritten
