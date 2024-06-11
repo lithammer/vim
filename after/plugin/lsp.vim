@@ -300,14 +300,14 @@ def OnLspAttached()
 
   nnoremap <buffer> g= <cmd>LspFormat<CR>
   vnoremap <buffer> g= <cmd>LspFormat<CR>
-  nnoremap <buffer> crr <cmd>LspCodeAction<CR>
-  nnoremap <buffer> gd <cmd>LspGotoDefinition<CR>
+  nnoremap <buffer> gra <cmd>LspCodeAction<CR>
   nnoremap <buffer> gD <cmd>LspGotoDeclaration<CR>
   nnoremap <buffer> gs <cmd>LspSymbolSearch<CR>
   nnoremap <buffer> gr <cmd>LspPeekReferences<CR>
+  nnoremap <buffer> grr <cmd>LspPeekReferences<CR>
   nnoremap <buffer> gi <cmd>LspGotoImpl<CR>
   nnoremap <buffer> gy <cmd>LspTypeDef<CR>
-  nnoremap <buffer> crn <cmd>LspRename<CR>
+  nnoremap <buffer> grn <cmd>LspRename<CR>
   nnoremap <buffer> [d <cmd>LspDiagPrev\|LspDiagCurrent<CR>
   nnoremap <buffer> ]d <cmd>LspDiagNext\|LspDiagCurrent<CR>
   nnoremap <buffer> K <cmd>LspHover<CR>
