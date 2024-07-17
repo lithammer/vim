@@ -315,7 +315,6 @@ def OnLspAttached()
   nnoremap <buffer> gra <cmd>LspCodeAction<CR>
   nnoremap <buffer> gD <cmd>LspGotoDeclaration<CR>
   nnoremap <buffer> gs <cmd>LspSymbolSearch<CR>
-  nnoremap <buffer> gr <cmd>LspPeekReferences<CR>
   nnoremap <buffer> grr <cmd>LspPeekReferences<CR>
   nnoremap <buffer> gi <cmd>LspGotoImpl<CR>
   nnoremap <buffer> gy <cmd>LspTypeDef<CR>
