@@ -204,7 +204,7 @@ var servers = [
     filetype: ['toml'],
   },
   {
-    path: 'typescript-language-server',
+    path: 'vtsls',
     args: ['--stdio'],
     filetype: [
       'javascript',
@@ -213,6 +213,18 @@ var servers = [
       'typescriptreact',
     ],
     rootSearch: ['package.json'],
+    workspaceConfig: {
+      typescript: {
+        inlayHints: {
+          enumMemberValues: { enabled: true },
+          functionLikeReturnTypes: { enabled: true },
+          parameterNames: { enabled: 'literals' },
+          parameterTypes: { enabled: true },
+          propertyDeclarationTypes: { enabled: true },
+          variableTypes: { enabled: true },
+        },
+      }
+    }
   },
   {
     name: 'vim-language-server',
