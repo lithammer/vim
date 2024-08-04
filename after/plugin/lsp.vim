@@ -346,8 +346,7 @@ def OnLspAttached()
   endif
 enddef
 
-augroup lsp
-  autocmd!
+augroup lsp | autocmd!
   autocmd User LspAttached OnLspAttached()
 augroup END
 
