@@ -45,12 +45,17 @@ var servers = [
     filetype: [
       'fish',
       'lua',
+      'nim',
       'sh'
     ],
     initializationOptions: {
       formatters: {
         fish_indent: {
           command: 'fish_indent'
+        },
+        nph: {
+          command: 'nph',
+          args: ['-'],
         },
         shfmt: {
           command: 'shfmt',
@@ -67,6 +72,7 @@ var servers = [
       formatFiletypes: {
         fish: 'fish_indent',
         lua: 'stylua',
+        nim: 'nph',
         sh: 'shfmt'
       }
     }
