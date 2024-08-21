@@ -167,7 +167,7 @@ var servers = [
   {
     name: 'ruff',
     path: 'ruff',
-    args: ['server', '--preview'],
+    args: ['server'],
     filetype: ['python'],
     rootSearch: ['pyproject.toml', 'ruff.toml', '.ruff.toml'],
     workspaceConfig: {},
