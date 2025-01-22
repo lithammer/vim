@@ -14,8 +14,13 @@ def CustomZenwritten()
   hi link LspInlayHintsType LspInlayHint
 enddef
 
+def CustomLunaperche()
+  hi link LspInlayHintsType Conceal
+enddef
+
 augroup colorscheme_change | autocmd!
   autocmd ColorScheme zenwritten CustomZenwritten()
+  autocmd ColorScheme lunaperche CustomLunaperche()
 augroup END
 
 set termguicolors
