@@ -101,6 +101,9 @@ def PackagerInit(pack: any)
   pack.add('habamax/vim-bronzage')
   pack.add('habamax/vim-nod')
   pack.add('habamax/vim-saturnite')
+  pack.add('nanotech/jellybeans.vim')
+  pack.add('romainl/apprentice')
+  pack.add('sainnhe/gruvbox-material')
   pack.add('zenbones-theme/zenbones.nvim')
 enddef
 
