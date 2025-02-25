@@ -94,24 +94,19 @@ var servers = [
     workspaceConfig: {
       gopls: {
         analyses: {
-          nilness: true,
-          unusedparams: true,
-          unusedwrite: true,
-          useany: true,
+          useany: true
         },
-        hoverKind: 'FullDocumentation',
-        linksInHover: false,
-        gofumpt: true,
         completeUnimported: true,
-        semanticTokens: true,
-        staticcheck: true,
-        usePlaceholders: true,
         completionDocumentation: true,
-        codelenses: {
-          generate: true,
-          test: true,
-          run_vulncheck_exp: true,
-        },
+        diagnosticsTrigger: 'Save',
+        directoryFilters: [
+          '-**/node_modules',
+          '-bazel-bin',
+          '-bazel-out',
+          '-bazel-src',
+          '-bazel-testlogs',
+        ],
+        gofumpt: true,
         hints: {
           assignVariableTypes: false,
           compositeLiteralFields: true,
@@ -121,6 +116,9 @@ var servers = [
           parameterNames: true,
           rangeVariableTypes: true,
         },
+        semanticTokens: true,
+        staticcheck: true,
+        usePlaceholders: true,
       }
     }
   },
