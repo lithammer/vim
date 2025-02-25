@@ -282,6 +282,13 @@ var servers = [
     }
   },
   {
+    name: 'yaml-language-server',
+    path: 'yaml-language-server',
+    args: ['--stdio'],
+    filetype: ['yaml'],
+    rootSearch: ['.yamllint', '.yamllint.yaml', '.yamllint.yml'],
+  },
+  {
     name: 'zls',
     path: 'zls',
     args: [],
