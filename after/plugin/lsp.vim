@@ -145,6 +145,12 @@ var servers = [
     syncInit: true
   },
   {
+    name: 'protols',
+    path: 'protols',
+    args: [],
+    filetype: ['proto'],
+  },
+  {
     name: 'pyright',
     path: 'pyright-langserver',
     args: ['--stdio'],
