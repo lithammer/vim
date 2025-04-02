@@ -132,7 +132,7 @@ var servers = [
   {
     name: 'nginx-language-server',
     path: 'nginx-language-server',
-    args: []
+    args: [],
     filetype: ['nginx']
   },
   {
