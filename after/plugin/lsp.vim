@@ -130,6 +130,12 @@ var servers = [
     rootSearch: ['.luarc.json', '.luarc.jsonc'],
   },
   {
+    name: 'nginx-language-server',
+    path: 'nginx-language-server',
+    args: []
+    filetype: ['nginx']
+  },
+  {
     name: 'nimlangserver',
     path: 'nimlangserver',
     args: [],
