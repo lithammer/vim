@@ -121,7 +121,7 @@ set autoread
 set breakindent
 set breakindentopt=shift:2
 set completepopup+=highlight:Pmenu,border:off
-set diffopt+=vertical,algorithm:histogram,indent-heuristic
+set diffopt+=algorithm:histogram,indent-heuristic,inline:char
 set fillchars+=vert:│,diff:╱
 set formatoptions+=1j
 set grepformat^=%f:%l:%c:%m
