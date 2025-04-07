@@ -315,6 +315,7 @@ var opts = {
   # showDiagWithVirtualText: true,
   showInlayHints: true,
   snippetSupport: true,
+  usePopupInCodeAction: true,
   vsnipSupport: true,
 }
 
