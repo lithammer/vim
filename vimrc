@@ -121,7 +121,11 @@ set autoread
 set breakindent
 set breakindentopt=shift:2
 set completepopup+=highlight:Pmenu,border:off
-set diffopt+=algorithm:histogram,indent-heuristic,inline:char
+set diffopt+=algorithm:histogram,indent-heuristic
+if has('patch-9.1.1276')
+  set diffopt+=inline:char
+endif
+set diffopt+=context:3
 set fillchars+=vert:│,diff:╱
 set formatoptions+=1j
 set grepformat^=%f:%l:%c:%m
