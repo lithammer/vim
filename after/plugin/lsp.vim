@@ -341,7 +341,7 @@ def OnLspAttached()
   nnoremap <buffer> gs <cmd>LspSymbolSearch<CR>
   nnoremap <buffer> grr <cmd>LspPeekReferences<CR>
   nnoremap <buffer> gi <cmd>LspGotoImpl<CR>
-  nnoremap <buffer> gy <cmd>LspTypeDef<CR>
+  nnoremap <buffer> gy <cmd>LspGotoTypeDef<CR>
   nnoremap <buffer> grn <cmd>LspRename<CR>
   nnoremap <buffer> [d <cmd>LspDiagPrev\|LspDiagCurrent<CR>
   nnoremap <buffer> ]d <cmd>LspDiagNext\|LspDiagCurrent<CR>
