@@ -91,7 +91,6 @@ def PackagerInit(pack: any)
 
   # Filetype plugins.
   pack.add('ericvw/vim-nim')
-  pack.add('gleam-lang/gleam.vim')
   pack.add('google/vim-jsonnet')
   pack.add('vim-crystal/vim-crystal')
   # pack.add('zah/nim.vim')
