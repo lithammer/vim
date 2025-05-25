@@ -98,7 +98,6 @@ def PackagerInit(pack: any)
   # Colorschemes.
   pack.add('habamax/vim-alchemist')
   pack.add('habamax/vim-bronzage')
-  pack.add('habamax/vim-nod')
   pack.add('habamax/vim-saturnite')
   pack.add('nanotech/jellybeans.vim')
   pack.add('romainl/apprentice')
