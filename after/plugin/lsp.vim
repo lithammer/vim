@@ -110,14 +110,12 @@ var servers = [
         hints: {
           assignVariableTypes: false,
           compositeLiteralFields: true,
-          compositeLiteralTypes: false,
           constantValues: true,
           functionTypeParameters: true,
           parameterNames: true,
           rangeVariableTypes: true,
         },
         semanticTokens: true,
-        staticcheck: true,
         usePlaceholders: true,
       }
     }
