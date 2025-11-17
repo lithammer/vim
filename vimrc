@@ -61,9 +61,6 @@ def PackagerInit(pack: any)
   pack.add('cohama/lexima.vim')
   pack.add('girishji/easyjump.vim')
   pack.add('girishji/fFtT.vim')
-  pack.add('girishji/scope.vim')
-  pack.add('girishji/vimcomplete')
-  pack.add('girishji/vimsuggest')
   pack.add('github/copilot.vim')
   pack.add('habamax/vim-shout')
   pack.add('hrsh7th/vim-vsnip')
@@ -149,13 +146,22 @@ set updatetime=300
 set virtualedit=block
 set wildignorecase
 set wildmenu wildcharm=<c-z> wildoptions=pum,fuzzy,tagfile pumheight=20
-set wildmode=longest,full
+
+# :help cmdline-autocompletion
+autocmd CmdlineChanged [:\/\?] call wildtrigger()
+set wildmode=noselect:lastused,full
+set wildoptions=pum
 
 &directory = vimdir .. '/swap//'
 &backupdir = vimdir .. '/backup'
 &undodir = vimdir .. '/undo'
 set backup
 set undofile
+
+# :help ins-autocompletion
+set autocomplete
+set complete=.^5,w^5
+set completeopt=menuone,popup,preinsert
 
 g:netrw_altfile = 1
 g:netrw_liststyle = 3

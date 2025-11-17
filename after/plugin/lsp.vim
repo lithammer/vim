@@ -319,6 +319,7 @@ def OnLspAttached()
   setlocal tagfunc=lsp#lsp#TagFunc
   setlocal updatetime=100
   setlocal completepopup+=highlight:Pmenu
+  setlocal complete^=o
 
   nnoremap <buffer> g= <cmd>LspFormat<CR>
   vnoremap <buffer> g= <cmd>LspFormat<CR>
