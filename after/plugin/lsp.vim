@@ -150,22 +150,15 @@ var servers = [
     filetype: ['proto'],
   },
   {
-    name: 'pyright',
-    path: 'pyright-langserver',
-    args: ['--stdio'],
+    name: 'pyrefly',
+    path: 'pyrefly',
+    args: ['lsp'],
     filetype: ['python'],
-    rootSearch: ['pyproject.toml'],
-    workspaceConfig: {
-      python: {
-        analysis: {
-          autoImportCompletions: true,
-          autoSearchPaths: true,
-          # diagnosticMode: 'workspace',
-          typeCheckingMode: 'basic',
-          useLibraryCodeForTypes: true,
-        },
-      },
-    },
+    rootSearch: [
+      'pyrefly.toml',
+      'pyproject.toml',
+      'requirements.txt',
+    ],
   },
   {
     name: 'ruff',
