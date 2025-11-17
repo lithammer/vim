@@ -93,14 +93,10 @@ var servers = [
     rootSearch: ['go.work', 'go.mod'],
     workspaceConfig: {
       gopls: {
-        analyses: {
-          useany: true
-        },
-        completeUnimported: true,
-        completionDocumentation: true,
         diagnosticsTrigger: 'Save',
         directoryFilters: [
           '-**/node_modules',
+          '-.venv',
           '-bazel-bin',
           '-bazel-out',
           '-bazel-src',
@@ -108,7 +104,7 @@ var servers = [
         ],
         gofumpt: true,
         hints: {
-          assignVariableTypes: false,
+          assignVariableTypes: true,
           compositeLiteralFields: true,
           constantValues: true,
           functionTypeParameters: true,
@@ -116,7 +112,6 @@ var servers = [
           rangeVariableTypes: true,
         },
         semanticTokens: true,
-        usePlaceholders: true,
       }
     }
   },
