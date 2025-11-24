@@ -299,7 +299,7 @@ var opts = {
   semanticHighlight: true,
   showDiagOnStatusLine: true,
   # showDiagWithVirtualText: true,
-  showInlayHints: true,
+  showInlayHints: false,
   snippetSupport: true,
   usePopupInCodeAction: true,
   vsnipSupport: true,
@@ -320,6 +320,8 @@ def OnLspAttached()
   setlocal updatetime=100
   setlocal completepopup+=highlight:Pmenu
   setlocal complete^=o
+
+  nnoremap <buffer> <leader>h <cmd>LspInlayHints toggle<CR>
 
   nnoremap <buffer> g= <cmd>LspFormat<CR>
   vnoremap <buffer> g= <cmd>LspFormat<CR>
