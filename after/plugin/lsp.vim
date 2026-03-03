@@ -149,17 +149,17 @@ var servers = [
     args: [],
     filetype: ['proto'],
   },
-  {
-    name: 'pyrefly',
-    path: 'pyrefly',
-    args: ['lsp'],
-    filetype: ['python'],
-    rootSearch: [
-      'pyrefly.toml',
-      'pyproject.toml',
-      'requirements.txt',
-    ],
-  },
+  # {
+  #   name: 'pyrefly',
+  #   path: 'pyrefly',
+  #   args: ['lsp'],
+  #   filetype: ['python'],
+  #   rootSearch: [
+  #     'pyrefly.toml',
+  #     'pyproject.toml',
+  #     'requirements.txt',
+  #   ],
+  # },
   {
     name: 'ruff',
     path: 'ruff',
@@ -204,6 +204,17 @@ var servers = [
     path: 'taplo',
     args: ['lsp', 'stdio'],
     filetype: ['toml'],
+  },
+  {
+    name: 'ty',
+    path: 'ty',
+    args: ['server'],
+    filetype: ['python'],
+    rootSearch: [
+      'ty.toml',
+      'pyproject.toml',
+      'requirements.txt',
+    ],
   },
   {
     path: 'vtsls',
