@@ -1,5 +1,9 @@
 vim9script
 
+# Ensure scripts/plugins with Unicode characters are read correctly
+# even when Vim is launched from a non-UTF-8 locale.
+set encoding=utf-8
+
 # https://github.com/vim/vim/issues/11729
 # https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
 # Mouse support
