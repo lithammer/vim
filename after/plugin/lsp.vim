@@ -322,6 +322,7 @@ def OnLspAttached()
   setlocal tagfunc=lsp#lsp#TagFunc
   setlocal updatetime=100
   setlocal completepopup+=highlight:Pmenu
+  # https://github.com/vim/vim/pull/16662
   setlocal complete^=o
 
   nnoremap <buffer> <leader>h <cmd>LspInlayHints toggle<CR>
