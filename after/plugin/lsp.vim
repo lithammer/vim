@@ -149,17 +149,6 @@ var servers = [
     args: [],
     filetype: ['proto'],
   },
-  # {
-  #   name: 'pyrefly',
-  #   path: 'pyrefly',
-  #   args: ['lsp'],
-  #   filetype: ['python'],
-  #   rootSearch: [
-  #     'pyrefly.toml',
-  #     'pyproject.toml',
-  #     'requirements.txt',
-  #   ],
-  # },
   {
     name: 'ruff',
     path: 'ruff',
@@ -206,19 +195,8 @@ var servers = [
     filetype: ['toml'],
   },
   {
-    name: 'ty',
-    path: 'ty',
-    args: ['server'],
-    filetype: ['python'],
-    rootSearch: [
-      'ty.toml',
-      'pyproject.toml',
-      'requirements.txt',
-    ],
-  },
-  {
-    path: 'vtsls',
-    args: ['--stdio'],
+    path: 'tsgo',
+    args: ['--lsp', '--stdio'],
     filetype: [
       'javascript',
       'javascriptreact',
@@ -229,15 +207,29 @@ var servers = [
     workspaceConfig: {
       typescript: {
         inlayHints: {
-          enumMemberValues: { enabled: true },
-          functionLikeReturnTypes: { enabled: true },
-          parameterNames: { enabled: 'literals' },
+          parameterNames: {
+            enabled: 'literals',
+            suppressWhenArgumentMatchesName: true,
+          },
           parameterTypes: { enabled: true },
-          propertyDeclarationTypes: { enabled: true },
           variableTypes: { enabled: true },
-        },
+          propertyDeclarationTypes: { enabled: true },
+          functionLikeReturnTypes: { enabled: true },
+          enumMemberValues: { enabled: true },
+        }
       }
     }
+  },
+  {
+    name: 'ty',
+    path: 'ty',
+    args: ['server'],
+    filetype: ['python'],
+    rootSearch: [
+      'ty.toml',
+      'pyproject.toml',
+      'requirements.txt',
+    ],
   },
   {
     name: 'vim-language-server',
