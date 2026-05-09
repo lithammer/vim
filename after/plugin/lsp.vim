@@ -130,13 +130,6 @@ var servers = [
     workspaceConfig: {}
   },
   {
-    name: 'marksman',
-    path: 'marksman',
-    args: ['server'],
-    filetype: ['markdown'],
-    syncInit: true
-  },
-  {
     name: 'protols',
     path: 'protols',
     args: [],
@@ -268,6 +261,12 @@ var servers = [
         format: { enable: true }
       }
     }
+  },
+  {
+    name: 'vscode-markdown-language-server',
+    path: 'vscode-markdown-language-server',
+    args: ['--stdio'],
+    filetype: ['markdown'],
   },
   {
     name: 'yaml-language-server',
